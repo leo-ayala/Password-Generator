@@ -48,20 +48,20 @@ function createPassword (functionArray) {
       var newCharacters = functionArray[Math.floor(Math.random()* functionArray.length)]()
     passString += newCharacters;
     }
-    var passwordText = document.querySelector("#password");
-  passwordText.value = passString;
+      var passwordText = document.querySelector("#password");
+      passwordText.value = passString;
 }
 
 
-  function generatePassword () {
+function generatePassword () {
   passlength = window.prompt("How many characters would you like? (8 to 128)")
-  if (passlength  >7 && passlength <129  ) {
-    passQuestions ()
-  }
-   else {
-     window.alert("Please select a number between 8 and 128.")
+    if (passlength  >7 && passlength <129  ) {
+      passQuestions ()
+    }
+    else {
+      window.alert("Please select a number between 8 and 128.")
       generatePassword (); 
-   }
+    }
 }
 
 // Get references to the #generate element
